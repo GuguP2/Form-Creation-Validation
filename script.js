@@ -9,8 +9,6 @@ const messages = [];
 
 form.addEventListener ("submit" , (event) =>{
 event.preventDefault();
-})
-
 if (username.length < 3) {
   isValid = false;
   messages.push("Username must be at least 3 characters long.");
@@ -34,5 +32,5 @@ feedbackDiv.style.color = #28a745;
     feedbackDiv.style.color = #dc3545;
   }
 }
-
+})
 }
