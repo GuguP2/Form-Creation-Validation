@@ -15,8 +15,10 @@ if (username.length < 3) {
   isValid = false;
   messages.push("Username must be at least 3 characters long.");
 }
-if (username.length < 3) {
+if (!email.includes('@') || !email.includes('.')) {
   isValid = false;
-  messages.push("Username must be at least 3 characters long.");
+  messages.push("Email must include both '@' and '.' characters.");
+}
+
 }
 }
