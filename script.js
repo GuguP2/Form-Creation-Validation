@@ -17,13 +17,17 @@ if (!email.includes('@') || !email.includes('.')) {
   isValid = false;
   messages.push("Email must include both '@' and '.' characters.");
 }
-if (isValid = false) {
+if (!isValid) {
   messages.push("Password must be at least 8 characters long.");
 }
-feedbackDiv.textContent = "Registration successful!";
-feedbackDiv.style.color = "#28a745";
-feedbackDiv.innerHTML = messages.join("<br>");
-feedbackDiv.style.color = "#dc3545";
-event.preventDefault();
+feedbackDiv.style.display = "block";
+
+if (isValid) {
+  feedbackDiv.textContent = "Registration successful!";
+  feedbackDiv.style.color = "#28a745";
+} else {
+  feedbackDiv.innerHTML = messages.join("<br>");
+  feedbackDiv.style.color = "#dc3545";
+}
 })
 })
