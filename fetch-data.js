@@ -30,4 +30,4 @@ dataContainer.appendChild(userList);
     console.error('Failed to load user data.', error.message);
   }
 }
-getUserData();
+document.addEventListener = 'DOMContentLoaded';
